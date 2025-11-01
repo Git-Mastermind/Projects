@@ -9,7 +9,7 @@ public class TaskManager {
     static TaskID taskIDs = new TaskID();
     static ImportantTasks importantTasks = new ImportantTasks();
     static Scanner scanner = new Scanner(System.in);
-    static TaskManagerFuncs taskManager = new TaskManagerFuncs();
+    static TaskManagerOptions taskManager = new TaskManagerOptions();
     public static void main(String[] args) {
         
         
@@ -54,8 +54,7 @@ public class TaskManager {
         }
 
         else {
-            System.out.println("Invalid Input!");
-            time.sleep(2000);
+            taskManager.invalidInput();
         }
         
     }

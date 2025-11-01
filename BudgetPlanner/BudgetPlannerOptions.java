@@ -1,7 +1,7 @@
 import java.text.NumberFormat;
 import java.util.Scanner;
 
-public class BudgetPlannerFuncs {
+public class BudgetPlannerOptions {
     static Payments payments = new Payments();
     static Expenses expense = new Expenses();
     static NumberFormat currency = NumberFormat.getCurrencyInstance();

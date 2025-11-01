@@ -8,7 +8,7 @@ public class BudgetPlanner {
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         
-        BudgetPlannerFuncs budgetPlanner = new BudgetPlannerFuncs();
+        BudgetPlannerOptions budgetPlanner = new BudgetPlannerOptions();
        while (true) {
 
         System.out.println(budgetPlanner.titleScreen());
