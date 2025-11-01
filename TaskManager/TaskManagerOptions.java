@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 
 
-public class TaskManagerFuncs {
+public class TaskManagerOptions {
     static Time time = new Time();
     static Tasks task = new Tasks();
     static TaskID taskIDs = new TaskID();

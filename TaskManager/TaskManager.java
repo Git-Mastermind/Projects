@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 
 public class TaskManager {
-    static Time time = new Time();
-    static Tasks task = new Tasks();
-    static TaskID taskIDs = new TaskID();
     static ImportantTasks importantTasks = new ImportantTasks();
     static Scanner scanner = new Scanner(System.in);
     static TaskManagerOptions taskManager = new TaskManagerOptions();

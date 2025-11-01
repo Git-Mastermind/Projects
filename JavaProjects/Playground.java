@@ -8,16 +8,8 @@ public class Playground {
         }
     }
 
-    public static int fibbanoci(int n) {
-        if (n == 0) {
-            return n;
-        }
-        else {
-            return fibbanoci(n - 1) + fibbanoci(n - 2);
-        }
-    }
     public static void main(String[] args) {
-        int result = fibbanoci(5);
+        int result = factorial(5);
         System.out.println(result);
     } 
 }
