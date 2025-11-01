@@ -1,15 +1,10 @@
 public class Playground {
-    public static int factorial(int n) {
-        if (n == 1) {
-            return n;
-        }
-        else {
-            return n - factorial(n - 1);
-        }
-    }
-
+    int X = 5;
     public static void main(String[] args) {
-        int result = factorial(5);
-        System.out.println(result);
-    } 
+        Playground playground1 = new Playground();
+        Playground playground2 = new Playground();
+        playground2.X = 9;
+        System.out.println(playground1.X);
+        System.out.println(playground2.X);
+    }
 }
