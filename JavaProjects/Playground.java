@@ -1,12 +1,19 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
 public  class Playground {
-    private int age = 13;
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int newAge) {
-        this.age = newAge;
+    public static void main(String[] args) {
+        try {
+            FileWriter writer = new FileWriter("data.txt", true);
+            writer.write("username: Eshan/n");
+            writer.write("password: hello123");
+            writer.close();
+            System.out.println("Data Saved Successfully");
+        }
+        catch (IOException e) {
+            System.out.println("Error!");
+            e.printStackTrace();
+        }
     }
     
 
