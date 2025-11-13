@@ -1,7 +1,12 @@
 package LearningExamples;
+import java.lang.System;
 
 public class Accessor {
-
+    public static void main(String[] args) {
+        OuterClass outerClass = new OuterClass();
+        OuterClass.InnerClass innerClass = outerClass.new InnerClass();
+        System.out.println(innerClass.returnX());
+    }
 
 
 }
