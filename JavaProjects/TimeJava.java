@@ -1,5 +1,5 @@
 
-public class Time {
+public class TimeJava {
     public void sleep(int milli) {
         try {
             Thread.sleep(milli);
