@@ -3,9 +3,14 @@ import java.util.*
 ;public class NumberGuesser {
 
     public static void main(String[] args) {
+        System.out.println(numberGuesser());
+    }
+
+    public static String numberGuesser() {
         Scanner scanner = new Scanner(System.in);
         int randomNumber = 0;
         int maximumGuess = 0;
+        int guesses = 0;
 
         System.out.print("(E)asy, (M)edium or (H)ard? ");
         String inputDifficulty = scanner.nextLine();
@@ -14,17 +19,20 @@ import java.util.*
             case "e":
                 randomNumber = (int) (Math.random() * 10);
                 maximumGuess = 10;
+                guesses = 3;
                 break;
             case "m":
                 randomNumber = (int) (Math.random() * 50);
                 maximumGuess = 50;
+                guesses = 5;
                 break;
             case "h":
                 randomNumber = (int) (Math.random() * 100);
                 maximumGuess = 100;
+                guesses = 8;
         }
 
-        int guesses = 5;
+        
         while (guesses > 0) {
             System.out.print("Guess (" + guesses + "): ");
             int userGuess = scanner.nextInt();
@@ -36,8 +44,7 @@ import java.util.*
             }
 
             if (userGuess == randomNumber) {
-                System.out.println("You win! The number was " + randomNumber + "!");
-                System.exit(1);
+                return "You win! The number was " + randomNumber + "!";
             }
             else if (userGuess < randomNumber) {
                 System.out.println("Too Low!");
@@ -50,11 +57,13 @@ import java.util.*
         }
         
         if (guesses == 0) {
-            System.out.println("You lose! The number was " + randomNumber);
-            System.exit(1);
+            return "You lose! The number was " + randomNumber;
         }
+        return "blank";
+        }
+    
+    
         
         
         
     }
-}
