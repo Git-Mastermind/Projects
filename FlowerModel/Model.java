@@ -1,6 +1,8 @@
-package NotAIModel;
+package FlowerModel;
 import java.util.*;
-import NotAIModel.Time;
+
+
+import FlowerModel.Time;
 
 public class Model {
     public static void main(String[] args) {
@@ -9,6 +11,8 @@ public class Model {
         
         float closestLength= 99999;
         float closestWidth = 99999;
+        float closestWidthValue = 0;
+        float closestLengthValue = 0;
         
         Scanner scanner = new Scanner(System.in);
         
@@ -62,19 +66,22 @@ public class Model {
 
                 for (int i = 0; i < petalInfo.size(); i+=2) {
                     if (Math.abs(inputLength - petalInfo.get(i)) < closestLength) {
-                        closestLength = petalInfo.get(i);
+                        closestLength = Math.abs(inputLength - petalInfo.get(i));
+                        closestLengthValue = petalInfo.get(i);
                     }
                 }
                 
                 for (int i = 1; i < petalInfo.size(); i+=2) {
                     if (Math.abs(inputWidth - petalInfo.get(i)) < closestWidth) {
-                        closestWidth = petalInfo.get(i);
+                        closestWidth = Math.abs(inputWidth - petalInfo.get(i));
+                        closestWidthValue = petalInfo.get(i);
                     }
                 }
 
 
-                int flowerIndex = petalInfo.indexOf(closestLength) / 2;
-                String flower = flowers.get(flowerIndex);
+                int flowerIndex = (petalInfo.indexOf(closestWidthValue) + 1) / 2;
+                String flowerName = flowers.get(flowerIndex);
+                
                 
                 System.out.println("Getting data...");
                 try {
@@ -83,7 +90,8 @@ public class Model {
                 catch (InterruptedException e) {
                     System.out.println("error");
                 }
-                System.out.println(flower);
+                System.out.println("You seem to have a " + flowerName + "!");
+
                 try {
                     Thread.sleep(2000);
                 }
@@ -98,6 +106,7 @@ public class Model {
             }
             else if (optionInput == 3) {
                 System.out.println(petalInfo);
+                System.out.println(flowers);
             }
             
 
