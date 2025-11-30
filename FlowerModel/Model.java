@@ -21,6 +21,7 @@ public class Model {
                 1: Train
                 2: Test
                 3: View Data
+                4: Quit
                 """);
         
             System.out.print("Choose an option: ");
@@ -108,6 +109,23 @@ public class Model {
                 System.out.println(petalInfo);
                 System.out.println(flowers);
             }
+
+            else if (optionInput == 4) {
+                scanner.close();
+                System.exit(1);
+            }
+
+            else {
+                System.out.println("Invalid Input!");
+                try {
+                    Thread.sleep(2000);
+                } 
+                catch (InterruptedException e) {
+                    System.out.println("Error!");
+                }              
+            }
+
+            
             
 
         }
